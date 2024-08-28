@@ -1,7 +1,7 @@
 //CreateNote.js
 
 import React, { useState } from 'react';
-import {CreateNoteProps, NewNote, Note} from "../types";
+import {CreateNoteProps, NewNote} from "../types";
 
 const CreateNote: React.FC<CreateNoteProps> = ({ onCreate }) => {
     const [title, setTitle] = useState('');
