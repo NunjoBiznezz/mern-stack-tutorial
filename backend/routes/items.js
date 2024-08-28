@@ -13,12 +13,15 @@ router.post('/add', (req, res) => {
         status: status || 'active',
     });
 
+    console.log('Adding new note:', JSON.stringify(newNote))
+
     newNote.save()
         .then(() => res.json('Note added!'))
         .catch(err => res.status(400).json(`Error: ${err}`));
 });
 
 router.get('/', (req, res) => {
+    console.log('Fetching notes')
     Item.find()
         .then(notes => res.json(notes))
         .catch(err => res.status(400).json(`Error: ${err}`));

@@ -4,8 +4,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const itemSchema = new Schema({
-    name: { type: String },
-    description: { type: String },
+    title: { type: String },
+    content: { type: String },
+    status: { type: String },
 });
 
 const Item = mongoose.model('Item', itemSchema);
