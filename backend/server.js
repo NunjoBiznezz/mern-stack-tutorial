@@ -12,7 +12,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB connection
-mongoose.connect('YOUR MONGODB URI',
+mongoose.connect('mongodb://mongodb:27017/mean-tutorial?authSource=admin',
     { useNewUrlParser: true, useUnifiedTopology: true });
 
 const connection = mongoose.connection;

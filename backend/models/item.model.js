@@ -1,4 +1,4 @@
-//item.models.js
+//item.model.js
 
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
