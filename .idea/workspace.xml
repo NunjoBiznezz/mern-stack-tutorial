@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06572c32-e884-4fed-9336-3dbd1237bf75" name="Changes" comment="Built client with Typescript">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/CreateNote.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CreateNote.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/reportWebVitals.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reportWebVitals.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +66,7 @@
       <updated>1724866958110</updated>
       <workItem from="1724866961410" duration="1143000" />
       <workItem from="1724868121234" duration="259000" />
-      <workItem from="1724868687585" duration="2762000" />
+      <workItem from="1724868687585" duration="4777000" />
     </task>
     <task id="LOCAL-00001" summary="Built client with Typescript">
       <option name="closed" value="true" />
@@ -72,7 +76,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724875368368</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Built client with Typescript">
+      <option name="closed" value="true" />
+      <created>1724875721894</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1724875721894</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
