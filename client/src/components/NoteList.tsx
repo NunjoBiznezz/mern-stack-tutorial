@@ -1,8 +1,9 @@
 //NoteList.js
 
 import React from 'react';
+import {NoteListProps} from "../types";
 
-const NoteList = ({ notes, onUpdate, onDelete }) => {
+const NoteList: React.FC<NoteListProps> = ({ notes, onUpdate, onDelete }) => {
     return (
         <div>
             <h2>Notes</h2>
@@ -13,9 +14,9 @@ const NoteList = ({ notes, onUpdate, onDelete }) => {
                         <p>{note.content}</p>
                         <p>Status: {note.status}</p>
                         <button onClick={() =>
-                            onUpdate(note._id)}>Update</button>
+                            onUpdate(note._id || '')}>Update</button>
                         <button onClick={() =>
-                            onDelete(note._id)}>Delete</button>
+                            onDelete(note._id || '')}>Delete</button>
                     </li>
                 ))}
             </ul>

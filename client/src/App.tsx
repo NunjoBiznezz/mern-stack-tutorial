@@ -5,7 +5,7 @@ import axios from 'axios';
 import NoteList from './components/NoteList';
 import CreateNote from './components/CreateNote';
 import './App.css';
-import { Note } from './types';  // Import the Note type
+import {NewNote, Note} from './types';  // Import the Note type
 
 const App: React.FC = () => {
   const [notes, setNotes] = useState<Note[]>([]);
@@ -20,10 +20,10 @@ const App: React.FC = () => {
             console.error('Error fetching notes:', error));
   }, []);
 
-  const handleCreateNote = (newNote: Note) => {
+  const handleCreateNote = (newNote: NewNote) => {
     axios.post<Note>('http://localhost:5000/items/add', newNote)
         .then(response => {
-            setNotes([...notes, newNote]);
+            setNotes([...notes, response.data]);
             console.log('Note created:', response.data)
         })
         .catch(error =>

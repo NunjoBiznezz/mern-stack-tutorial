@@ -1,8 +1,9 @@
 //CreateNote.js
 
 import React, { useState } from 'react';
+import {CreateNoteProps, NewNote, Note} from "../types";
 
-const CreateNote = ({ onCreate }) => {
+const CreateNote: React.FC<CreateNoteProps> = ({ onCreate }) => {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
 
@@ -12,7 +13,7 @@ const CreateNote = ({ onCreate }) => {
             return;
         }
 
-        const newNote = {
+        const newNote : NewNote = {
             title: title,
             content: content,
             status: 'active',
