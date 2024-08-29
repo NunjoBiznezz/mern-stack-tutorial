@@ -1,8 +1,10 @@
 //items.js
 
-const express = require('express');
+import express from 'express';
+import {IItem, Item} from "../models/item"
+
 const router = express.Router();
-const Item = require('../models/item.model');
+
 
 router.post('/add', (req, res) => {
     const { title, content, status } = req.body;
@@ -28,14 +30,17 @@ router.get('/', (req, res) => {
 });
 
 router.put('/update/:id', (req, res) => {
-    Item.findById(req.params.id)
+    const id = req.params.id
+    Item.findById(id, null)
         .then(note => {
-            note.title = req.body.title;
-            note.content = req.body.content;
-            note.status = req.body.status || note.status;
-            note.save()
-                .then(() => res.json('Note updated!'))
-                .catch(err => res.status(400).json(`Error: ${err}`));
+            if (note) {
+                note.title = req.body.title;
+                note.content = req.body.content;
+                note.status = req.body.status || note.status;
+                note.save()
+                    .then(() => res.json('Note updated!'))
+                    .catch(err => res.status(400).json(`Error: ${err}`));
+            }
         })
         .catch(err => res.status(400).json(`Error: ${err}`));
 });
