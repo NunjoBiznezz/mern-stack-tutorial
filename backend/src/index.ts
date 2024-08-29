@@ -6,15 +6,13 @@ import dotenv from "dotenv";
 import cors from "cors";
 import mongoose from "mongoose";
 
-const bodyParser = require('body-parser');
-
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors());
-app.use(bodyParser.json({}));
+app.use(express.json())
 
 // MongoDB connection
 const mongoURI = `mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}?authSource=admin`;

@@ -18,7 +18,7 @@ router.post('/add', (req, res) => {
     console.log('Adding new note:', JSON.stringify(newNote))
 
     newNote.save()
-        .then(() => res.json('Note added!'))
+        .then(() => res.json(newNote))
         .catch(err => res.status(400).json(`Error: ${err}`));
 });
 
